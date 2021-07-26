@@ -1,0 +1,26 @@
+WindowManager:
+    LoginScreen:
+    Dashboard:
+
+<LoginScreen>:
+    name: "login"
+
+    MDToolbar:
+        id: toolbar
+        title: "Fusion BPO Services"
+        pos_hint: {'top':1.0}
+
+    MDBoxLayout:
+        orientation: "vertical"
+        height: self.minimum_height
+        y: root.height - toolbar.height - self.height
+
+        MDLabel:
+            id: footer_label
+            text: "Developed By Omind Technologies"
+            font: 10
+            md_bg_color: app.theme_cls.accent_color
+
+
+
+
