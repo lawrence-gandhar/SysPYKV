@@ -1,6 +1,6 @@
 import kivy
 
-kivy.require('1.0.6')
+kivy.require('2.0.0')
 
 from kivymd.app import MDApp
 from kivy.lang.builder import Builder
@@ -23,7 +23,6 @@ class WindowManager(ScreenManager):
 class SysPyKV(MDApp):
 
     def build(self):
-        #self.theme_cls.primary_palette = "DeepPurple"
         return Builder.load_file('kv_files/loginscreen.kv')
 
 
