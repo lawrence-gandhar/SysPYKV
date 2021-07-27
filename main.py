@@ -23,7 +23,7 @@ class WindowManager(ScreenManager):
 class SysPyKV(MDApp):
 
     def build(self):
-        #self.theme_cls.theme_style = "Dark"
+        #self.theme_cls.primary_palette = "DeepPurple"
         return Builder.load_file('kv_files/loginscreen.kv')
 
 

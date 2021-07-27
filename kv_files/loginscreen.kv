@@ -5,22 +5,49 @@ WindowManager:
 <LoginScreen>:
     name: "login"
 
-    MDToolbar:
-        id: toolbar
-        title: "Fusion BPO Services"
-        pos_hint: {'top':1.0}
-
     MDBoxLayout:
         orientation: "vertical"
-        height: self.minimum_height
-        y: root.height - toolbar.height - self.height
 
-        MDLabel:
-            id: footer_label
-            text: "Developed By Omind Technologies"
-            font: 10
-            md_bg_color: app.theme_cls.accent_color
+        MDToolbar:
+            id: toolbar
+            title: "User System Check"
 
+        MDBoxLayout:
+            size_hint: None, None
+            size: root.size[0], root.size[1] - toolbar.height - 100
+
+            MDCard:
+                size_hint: None, None
+                size: self.parent.size[0], self.parent.size[1]
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                orientation: "vertical"
+                padding: "8dp"
+                spacing: "20dp"
+
+                canvas:
+                    Color:
+                        rgba: (1, 1, 1, 1)
+                    Rectangle:
+                        pos: ((self.parent.size[0]/2) - (170/2) - 10, self.parent.size[1] - 50)
+                        size: 170, 70
+                        source: 'fusion-logo-vector-01@2x-e1619898835439.png'
+
+                MDLabel:
+                    text: "Body"
+
+
+
+
+        MDBottomAppBar:
+            MDToolbar:
+                id: bottom_toolbar
+                title: "Powered By Fusion Bpo Services Pvt Ltd"
+                type: "bottom"
+                icon: "language-python"
+                mode: "end"
+
+
+        Widget:
 
 
 
